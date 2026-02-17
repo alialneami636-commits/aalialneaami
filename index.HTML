@@ -4,103 +4,299 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>علي النعمي | استشارات مالية ومحاسبية احترافية</title>
-    <meta property="og:title" content="علي النعمي | خبير استشارات محاسبية">
-    <meta property="og:description" content="دقة تصنع الفارق ورؤية تبني المستقبل. حلول مالية ومحاسبية متكاملة لأعمالك.">
-    <meta property="og:image" content="https://ali-alnaami.netlify.app/logo.png"> <meta property="og:url" content="https://ali-alnaami.netlify.app">
+    <title>علي النعمي | مستشار مالي ومعتمد - تدقيق، زكاة، دراسات جدوى</title>
+    <meta name="description" content="المستشار المالي علي النعمي، خبير في التدقيق المحاسبي، الاستشارات الضريبية والزكوية، ودراسات الجدوى الاقتصادية في اليمن والخليج.">
+    <meta name="keywords" content="علي النعمي, مستشار مالي, تدقيق محاسبي, محاسب قانوني اليمن, حساب الزكاة, دراسات جدوى, استشارات مالية صنعاء">
+    <meta name="author" content="Ali Al-Nuami">
+    
+    <meta property="og:title" content="علي النعمي | الاستشارات المالية الفاخرة">
+    <meta property="og:description" content="نصنع للقيمة أبعاداً جديدة. خدمات تدقيق واستشارات مالية بمعايير عالمية.">
     <meta property="og:type" content="website">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta property="og:image" content="https://yourdomain.com/preview-image.jpg"> <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        body { font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
-        .gradient-primary { background: linear-gradient(135deg, #002D62 0%, #001a39 100%); }
-        .hover-glow:hover { box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); }
+        :root { --gold: #c5a059; --navy: #0a1128; }
+        body { font-family: 'Cairo', sans-serif; transition: 0.5s; overflow-x: hidden; cursor: none; }
+        
+        body.dark { background-color: var(--navy); color: #ffffff; }
+        body.light { background-color: #f8fafc; color: var(--navy); }
+        .text-main { color: inherit; }
+        body.light .text-main, body.light h1, body.light h2, body.light h3, body.light p { color: var(--navy) !important; }
+
+        .cursor-dot { width: 8px; height: 8px; background: var(--gold); position: fixed; border-radius: 50%; pointer-events: none; z-index: 1000; }
+        .cursor-outline { width: 40px; height: 40px; border: 2px solid var(--gold); position: fixed; border-radius: 50%; pointer-events: none; z-index: 999; transition: transform 0.15s ease-out; }
+
+        .glass-card { 
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            transition: 0.4s;
+            position: relative;
+        }
+        .glass-card:hover { border-color: var(--gold); box-shadow: 0 0 30px rgba(197, 160, 89, 0.2); transform: translateY(-5px); }
+        body.light .glass-card { background: rgba(255, 255, 255, 0.8); border-color: rgba(0,0,0,0.1); }
+
+        #ai-chat-window { 
+            display: none; position: fixed; bottom: 100px; left: 30px; width: 340px; height: 480px; z-index: 1000; 
+            flex-direction: column; border-radius: 30px; overflow: hidden;
+            background: rgba(10, 17, 40, 0.85); backdrop-filter: blur(25px);
+            border: 1px solid var(--gold);
+        }
+        .chat-bubble { padding: 12px; border-radius: 15px; margin-bottom: 10px; font-size: 13px; }
+        .ai-msg { background: var(--gold); color: var(--navy) !important; align-self: flex-start; }
+        .user-msg { background: rgba(255,255,255,0.1); align-self: flex-end; }
+
+        .btn-luxury { background: var(--gold); color: var(--navy); font-weight: 800; transition: 0.3s; position: relative; z-index: 10; }
+        .lang-switch { font-size: 10px; cursor: pointer; border: 1px solid var(--gold); color: var(--gold); padding: 2px 6px; border-radius: 4px; }
+        .lang-switch.active { background: var(--gold); color: var(--navy); }
+        
+        .share-btn { transition: 0.3s; cursor: pointer; }
+        .share-btn:hover { color: var(--gold); transform: scale(1.1); }
     </style>
 </head>
+<body class="dark">
 
-<body class="bg-slate-50 text-slate-800">
+    <div class="cursor-dot md:block hidden"></div>
+    <div class="cursor-outline md:block hidden"></div>
 
-    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-4 space-x-reverse">
-                <svg width="50" height="50" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="100" cy="100" r="90" stroke="#002D62" stroke-width="2"/>
-                    <circle cx="100" cy="100" r="85" stroke="#D4AF37" stroke-width="1" stroke-dasharray="4 4"/>
-                    <path d="M60 140 L80 110 L110 125 L150 70" stroke="#D4AF37" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M70 80 C 90 70, 130 70, 140 100 C 145 120, 120 150, 90 145 C 70 140, 60 120, 80 105" stroke="#002D62" stroke-width="6" stroke-linecap="round" fill="none"/>
-                    <circle cx="85" cy="155" r="4" fill="#D4AF37"/>
-                </svg>
-                <div>
-                    <h1 class="text-xl font-bold text-slate-900 tracking-tight">علي النعمي</h1>
-                    <p class="text-[10px] text-amber-600 font-bold uppercase tracking-[0.2em]">Financial Consultant</p>
+    <header class="fixed w-full z-[100] px-4 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center bg-white/5 backdrop-blur-lg p-3 rounded-2xl border border-white/10 shadow-xl">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-gold rounded-xl flex items-center justify-center text-navy font-black text-xl shadow-lg">ع</div>
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-3">
+                        <h1 class="text-main font-black text-lg leading-none" data-key="name">علي النعمي</h1>
+                        <div class="flex items-center gap-1 bg-black/20 p-1 rounded-lg">
+                            <button onclick="toggleDarkMode()" class="text-gold p-1 hover:scale-110"><i data-lucide="sun" id="theme-icon" class="w-4 h-4"></i></button>
+                            <button onclick="shareSite()" class="text-gold p-1 share-btn"><i data-lucide="share-2" class="w-4 h-4"></i></button>
+                            <span onclick="setLanguage('ar')" id="lang-ar" class="lang-switch active">AR</span>
+                            <span onclick="setLanguage('en')" id="lang-en" class="lang-switch">EN</span>
+                        </div>
+                    </div>
+                    <span class="text-[9px] text-gold font-bold tracking-[2px]" data-key="title">Financial Consultant</span>
                 </div>
             </div>
-            <nav class="hidden md:flex items-center space-x-8 space-x-reverse font-semibold">
-                <a href="https://wa.me/967782309030" class="bg-slate-900 text-amber-500 border border-amber-500/30 px-6 py-2 rounded-lg hover:bg-amber-500 hover:text-white transition-all shadow-lg">تواصل معي</a>
-            </nav>
+            <a href="https://wa.me/967782309030" class="bg-emerald-600 text-white px-4 py-2 rounded-xl text-[11px] font-bold flex items-center gap-2 shadow-lg"><i data-lucide="message-circle" class="w-4 h-4"></i> <span data-key="consultBtn">واتساب</span></a>
         </div>
     </header>
 
-    <section class="gradient-primary text-white py-32 px-6 relative text-center">
-        <div class="container mx-auto relative z-10" data-aos="fade-up">
-            <h2 class="text-5xl md:text-7xl font-extrabold mb-8 leading-[1.2]">دقة تصنع <span class="text-amber-500">الفارق</span></h2>
-            <p class="text-lg md:text-xl mb-12 text-slate-400 max-w-3xl mx-auto leading-relaxed">نحن لا ندير الأرقام فحسب، بل نصيغ منها استراتيجيات تدفع أعمالك نحو القمة.</p>
+    <section class="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden">
+        <div id="particles-js" class="absolute inset-0"></div>
+        <div class="relative z-10" data-aos="fade-up">
+            <h2 class="text-5xl md:text-7xl font-black mb-6 text-main">
+                <span data-key="hero1">نصنع للقيمة</span> <br>
+                <span id="typewriter" class="text-gold"></span>
+            </h2>
+            <p class="text-slate-400 max-w-xl mx-auto mb-8 text-main opacity-80" data-key="heroDesc">مستشارك المالي المعتمد للتدقيق والمراجعة والحلول الضريبية المبتكرة.</p>
             
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="https://wa.me/967782309030" class="bg-amber-500 text-slate-900 px-10 py-4 rounded-xl font-bold hover:bg-amber-600 transition-all transform hover:-translate-y-1 shadow-2xl flex items-center justify-center gap-2">
-                    <i data-lucide="message-circle"></i> ابدأ استشارتك الآن
-                </a>
+            <div class="max-w-xs mx-auto p-4 rounded-3xl border border-gold/30 bg-gold/5 flex justify-center gap-8 mb-10 shadow-inner">
+                <a href="https://wa.me/967782309030" class="flex items-center gap-2 text-emerald-500 font-bold text-sm"><i data-lucide="message-circle"></i> WhatsApp</a>
+                <div class="w-[1px] bg-gold/30"></div>
+                <a href="tel:+967782309030" class="flex items-center gap-2 text-blue-500 font-bold text-sm"><i data-lucide="phone"></i> Call Now</a>
+            </div>
+
+            <button onclick="toggleChat()" class="btn-luxury px-12 py-4 rounded-2xl text-sm flex items-center gap-2 mx-auto"><i data-lucide="message-square"></i> <span data-key="startBtn">مساعد علي</span></button>
+        </div>
+    </section>
+
+    <section class="py-24 container mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card p-8 rounded-[2rem]" data-aos="fade-up">
+                <i data-lucide="shield-check" class="text-gold mb-5 w-10 h-10"></i>
+                <h3 class="text-xl font-black mb-3 text-main" data-key="ser1">التدقيق والمراجعة</h3>
+                <p class="text-sm opacity-70 text-main" data-key="ser1Desc">مراجعة شاملة لضمان سلامة المركز المالي.</p>
+            </div>
+            <div class="glass-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="100">
+                <i data-lucide="landmark" class="text-gold mb-5 w-10 h-10"></i>
+                <h3 class="text-xl font-black mb-3 text-main" data-key="ser2">الزكاة والضرائب</h3>
+                <p class="text-sm opacity-70 text-main" data-key="ser2Desc">حلول ذكية للامتثال الضريبي والزكوي.</p>
+            </div>
+            <div class="glass-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="200">
+                <i data-lucide="gem" class="text-gold mb-5 w-10 h-10"></i>
+                <h3 class="text-xl font-black mb-3 text-main" data-key="ser3">دراسات الجدوى</h3>
+                <p class="text-sm opacity-70 text-main" data-key="ser3Desc">دراسات اقتصادية تضمن نجاح استثمارك.</p>
+            </div>
+            <div class="glass-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="300">
+                <i data-lucide="cpu" class="text-gold mb-5 w-10 h-10"></i>
+                <h3 class="text-xl font-black mb-3 text-main" data-key="ser4">تأسيس الأنظمة</h3>
+                <p class="text-sm opacity-70 text-main" data-key="ser4Desc">بناء هياكل محاسبية رقمية حديثة.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="bg-slate-900 py-24 px-6 relative">
-        <div class="container mx-auto max-w-5xl">
-            <div class="bg-white rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col md:flex-row">
-                <div class="md:w-5/12 p-12 bg-slate-950 text-white">
-                    <h3 class="text-3xl font-bold mb-8">لنصنع النجاح معاً</h3>
-                    <div class="space-y-8">
-                        <a href="tel:782309030" class="flex items-center gap-6 group">
-                            <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-full flex items-center justify-center text-amber-500">
-                                <i data-lucide="phone"></i>
-                            </div>
-                            <span class="text-xl font-bold tracking-widest">782309030</span>
-                        </a>
-                        <a href="https://wa.me/967782309030" class="flex items-center gap-6 group">
-                            <div class="w-12 h-12 bg-green-500/10 border border-green-500/20 rounded-full flex items-center justify-center text-green-500">
-                                <i data-lucide="message-square"></i>
-                            </div>
-                            <span class="text-lg">واتساب مباشر</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="md:w-7/12 p-12 flex items-center justify-center text-center bg-gray-50">
-                    <div class="max-w-xs">
-                        <h4 class="text-2xl font-bold mb-4 text-slate-900">ثقتكم التزامنا</h4>
-                        <p class="text-slate-500 leading-relaxed mb-8">نضمن لك سرية تامة للبيانات ودقة متناهية تحت إشراف علي النعمي.</p>
-                        <a href="https://wa.me/967782309030" class="block w-full py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-all shadow-lg shadow-slate-200">حجز موعد مقابلة</a>
-                    </div>
-                </div>
+    <section class="py-10 container mx-auto px-6 relative z-10">
+        <div class="glass-card p-10 rounded-[3rem] flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <h3 class="text-3xl font-black mb-5 text-gold" data-key="whyUsTitle">لماذا نحن؟</h3>
+                <p class="text-main opacity-80 leading-relaxed mb-6" data-key="whyUsDesc">نجمع بين المعرفة العميقة بالتشريعات المحلية والأنظمة المحاسبية العالمية.</p>
+                <ul class="space-y-3 text-sm font-bold text-main">
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="text-gold w-4 h-4"></i> سرية بيانات تامة</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="text-gold w-4 h-4"></i> دقة محاسبية متناهية</li>
+                </ul>
+            </div>
+            <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                <div class="bg-gold/10 p-6 rounded-2xl border border-gold/20 text-center"><i data-lucide="lock" class="mx-auto text-gold mb-2"></i><p class="text-[10px] font-bold">السرية</p></div>
+                <div class="bg-gold/10 p-6 rounded-2xl border border-gold/20 text-center"><i data-lucide="award" class="mx-auto text-gold mb-2"></i><p class="text-[10px] font-bold">الجودة</p></div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-white py-12 border-t text-center">
-        <p class="text-slate-500 font-medium italic">"الأرقام هي لغة الأعمال، ونحن المترجمون المحترفون لها - علي النعمي"</p>
-        <div class="mt-4 text-slate-400 text-sm">
-            <p>&copy; 2026 علي النعمي. جميع الحقوق محفوظة.</p>
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto glass-card p-10 rounded-[3rem] text-center" data-aos="zoom-in">
+            <h3 class="text-3xl font-black mb-8 text-main" data-key="calcTitle">الحاسبة الزكوية</h3>
+            <div class="flex flex-col md:flex-row gap-4">
+                <input type="number" id="zakat-input" placeholder="المبلغ الصافي" class="flex-1 bg-black/20 border border-gold/30 p-4 rounded-xl text-center font-bold text-gold outline-none">
+                <button onclick="calculateZakat()" class="btn-luxury px-10 py-4 rounded-xl shadow-lg">احسب</button>
+            </div>
+            <div id="zakat-result" class="mt-6 hidden text-2xl font-black text-main"></div>
         </div>
+    </section>
+
+    <div id="ai-chat-window">
+        <div class="bg-gold p-4 flex justify-between items-center text-navy">
+            <span class="font-black text-sm flex items-center gap-2"><i data-lucide="message-square"></i> مساعد علي</span>
+            <button onclick="toggleChat()"><i data-lucide="x"></i></button>
+        </div>
+        <div class="flex-1 p-4 overflow-y-auto flex flex-col gap-2" id="chat-body">
+            <div class="chat-bubble ai-msg font-bold">أهلاً بك! كيف يمكنني مساعدتك اليوم؟</div>
+        </div>
+        <div class="p-3 bg-white/5 flex gap-2">
+            <input type="text" id="chat-input" placeholder="اكتب سؤالك..." class="flex-1 bg-black/20 border border-gold/20 rounded-xl px-4 py-2 text-white text-xs outline-none">
+            <button onclick="handleBot()" class="bg-gold p-2 rounded-xl text-navy shadow-md"><i data-lucide="send"></i></button>
+        </div>
+    </div>
+
+    <button onclick="toggleChat()" class="fixed bottom-8 left-8 bg-gold text-navy w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-[1001] transition-all hover:scale-110"><i data-lucide="message-square"></i></button>
+
+    <footer class="py-20 container mx-auto px-6 border-t border-white/5 opacity-90">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-main">
+            <div>
+                <h4 class="text-2xl font-black mb-4">علي النعمي</h4>
+                <p class="text-sm opacity-60 leading-relaxed">الخيار الأول للمال والأعمال.</p>
+            </div>
+            <div>
+                <h5 class="font-black text-gold mb-4 uppercase text-xs tracking-widest">روابط سريعة</h5>
+                <ul class="space-y-2 text-sm opacity-80">
+                    <li><a href="#" onclick="toggleChat()" class="hover:text-gold transition">طلب استشارة</a></li>
+                    <li><a href="https://wa.me/967782309030" class="hover:text-gold transition">تواصل واتساب</a></li>
+                    <li><a href="#" onclick="shareSite()" class="hover:text-gold transition flex items-center gap-1"><i data-lucide="share-2" class="w-3 h-3"></i> مشاركة الموقع</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-black text-gold mb-4 uppercase text-xs tracking-widest">معلومات التواصل</h5>
+                <ul class="space-y-2 text-sm opacity-80">
+                    <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> 782309030</li>
+                    <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> صنعاء - اليمن</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-16 text-center text-[10px] opacity-30 uppercase tracking-[4px]">© 2026 Ali Al-Nuami.</div>
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
-        lucide.createIcons();
+        AOS.init({ duration: 800 }); lucide.createIcons();
+
+        const translations = {
+            ar: { name: "علي النعمي", title: "مستشار مالي", hero1: "نصنع للقيمة", heroDesc: "مستشارك المالي المعتمد للتدقيق والمراجعة والحلول الضريبية المبتكرة.", consultBtn: "واتساب", startBtn: "مساعد علي", ser1: "التدقيق والمراجعة", ser1Desc: "مراجعة شاملة لضمان سلامة المركز المالي.", ser2: "الزكاة والضرائب", ser2Desc: "حلول ذكية للامتثال الضريبي والزكوي.", ser3: "دراسات الجدوى", ser3Desc: "دراسات اقتصادية تضمن نجاح استثمارك.", ser4: "تأسيس الأنظمة", ser4Desc: "بناء هياكل محاسبية رقمية حديثة.", calcTitle: "الحاسبة الزكوية", whyUsTitle: "لماذا نحن؟", whyUsDesc: "نجمع بين المعرفة العميقة بالتشريعات المحلية والأنظمة العالمية." },
+            en: { name: "Ali Al-Nuami", title: "Financial Consultant", hero1: "Creating Value", heroDesc: "Your certified financial advisor for auditing, review, and innovative tax solutions.", consultBtn: "WhatsApp", startBtn: "Ali Assistant", ser1: "Audit & Review", ser1Desc: "Comprehensive review to ensure financial integrity.", ser2: "Zakat & Tax", ser2Desc: "Smart solutions for tax and zakat compliance.", ser3: "Feasibility Studies", ser3Desc: "Economic studies ensuring investment success.", ser4: "System Setup", ser4Desc: "Building modern digital accounting structures.", calcTitle: "Zakat Calculator", whyUsTitle: "Why Us?", whyUsDesc: "We combine deep local legislation knowledge with global standards." }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            document.querySelectorAll('[data-key]').forEach(el => el.innerText = translations[lang][el.getAttribute('data-key')]);
+            document.getElementById('lang-ar').className = `lang-switch ${lang==='ar'?'active':''}`;
+            document.getElementById('lang-en').className = `lang-switch ${lang==='en'?'active':''}`;
+        }
+
+        function calculateZakat() {
+            const val = document.getElementById('zakat-input').value;
+            if(val > 0) {
+                const res = document.getElementById('zakat-result');
+                res.innerText = "مبلغ الزكاة: " + (val * 0.025).toLocaleString() + " ريال";
+                res.classList.remove('hidden');
+            }
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark'); document.body.classList.toggle('light');
+            const isDark = document.body.classList.contains('dark');
+            document.getElementById('theme-icon').setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+            lucide.createIcons();
+        }
+
+        function toggleChat() {
+            const win = document.getElementById('ai-chat-window');
+            win.style.display = win.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function handleBot() {
+            const input = document.getElementById('chat-input');
+            const body = document.getElementById('chat-body');
+            if(!input.value.trim()) return;
+            const uDiv = document.createElement('div'); uDiv.className="chat-bubble user-msg"; uDiv.innerText=input.value; body.appendChild(uDiv);
+            setTimeout(() => {
+                const aDiv = document.createElement('div'); aDiv.className="chat-bubble ai-msg font-bold";
+                aDiv.innerHTML = `نحن هنا لخدمتك! يمكنك طلب استشارة تفصيلية عبر واتساب: <br><a href="https://wa.me/967782309030" class="underline">تواصل الآن 🟢</a>`;
+                body.appendChild(aDiv); body.scrollTop = body.scrollHeight;
+            }, 700);
+            input.value = "";
+        }
+        
+        async function shareSite() {
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: 'علي النعمي | مستشار مالي معتمد',
+                        text: 'استشارات مالية وتدقيق حسابات ودراسات جدوى بمعايير عالمية.',
+                        url: window.location.href
+                    });
+                } catch (err) {
+                    console.log('Share failed', err);
+                }
+            } else {
+                alert('عذراً، متصفحك لا يدعم خاصية المشاركة المباشرة. يمكنك نسخ الرابط من المتصفح.');
+            }
+        }
+
+        const dot = document.querySelector('.cursor-dot');
+        const outline = document.querySelector('.cursor-outline');
+        window.addEventListener('mousemove', (e) => {
+            dot.style.left = e.clientX + 'px'; dot.style.top = e.clientY + 'px';
+            outline.animate({ left: e.clientX-20+'px', top: e.clientY-20+'px' }, { duration: 400, fill: "forwards" });
+        });
+
+        const words = ["أبعاداً جديدة", "رؤية مستقبلية", "حلولاً ذكية"];
+        let wordIdx = 0, charIdx = 0, isDeleting = false;
+        function type() {
+            const current = words[wordIdx];
+            const typeText = isDeleting ? current.substring(0, charIdx--) : current.substring(0, charIdx++);
+            document.getElementById("typewriter").textContent = typeText;
+            if (!isDeleting && charIdx > current.length) { isDeleting = true; setTimeout(type, 1500); }
+            else if (isDeleting && charIdx < 0) { isDeleting = false; wordIdx = (wordIdx + 1) % words.length; setTimeout(type, 500); }
+            else { setTimeout(type, isDeleting ? 50 : 100); }
+        }
+        type();
+
+        particlesJS('particles-js', { "particles": { "number": { "value": 30 }, "color": { "value": "#c5a059" }, "opacity": { "value": 0.2 }, "size": { "value": 2 }, "line_linked": { "enable": true, "distance": 150, "color": "#c5a059", "opacity": 0.1 }, "move": { "enable": true, "speed": 1 } } });
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "علي النعمي للاستشارات المالية",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "صنعاء",
+        "addressCountry": "YE"
+      },
+      "telephone": "+967782309030"
+    }
     </script>
 </body>
 </html>
